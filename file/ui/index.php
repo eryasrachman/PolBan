@@ -426,7 +426,7 @@ if ($_SESSION[$app_name]['logedin'] == true) {
                 <h2>About</h2>
                 <p>PolBan, The GUI bandwidth limiter for iptables-mod-hashlimit.</p>
                 <p>Required iptables-mod-iprange, iptables-mod-hashlimit.</p>
-                <p>Source Code: https://github.com/tegohsx/PolBan/</p>
+                <p>Source Code: https://github.com/eryasrachman/PolBan/</p>
                 <p class="mt-4">
                     <button class="btn btn-danger" onclick="uninstallMe(this)">Uninstall PolBan</button>
                 </p>
@@ -448,7 +448,7 @@ if ($_SESSION[$app_name]['logedin'] == true) {
                 </form>
             </div>
             <hr>
-            <p class="text-center">Author: &nbsp;&nbsp;<a href="https://github.com/tegohsx/" target="_blank">Tegohsx</a></p>
+            <p class="text-center">Author: &nbsp;&nbsp;<a href="https://github.com/eryasrachman/" target="_blank">eryasrachman</a></p>
         </div>
         <script>
             let state = {}
@@ -704,7 +704,7 @@ if ($_SESSION[$app_name]['logedin'] == true) {
                 </div>
             </form>
             <hr>
-            <p class="text-center">Author: &nbsp;&nbsp;<a href="https://github.com/tegohsx/" target="_blank">Tegohsx</a></p>
+            <p class="text-center">Author: &nbsp;&nbsp;<a href="https://github.com/eryasrachman/" target="_blank">eryasrachman</a></p>
         </div>
         <script>
             if (!inIframe()) {
