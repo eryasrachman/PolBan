@@ -1,0 +1,5 @@
+<?php
+$custom_firewall = shell_exec("cat /etc/firewall.user");
+if (strpos($custom_firewall, '/root/.PolBan/run') === FALSE) {
+    shell_exec("echo \"/root/.PolBan/run\" >> /etc/firewall.user");
+}
