@@ -1,0 +1,26 @@
+#!/bin/sh
+
+opkg update
+if [[ $(opkg list-installed | grep -c "^iptables-mod-hashlimit") == "0" ]]; then echo -e "Pkg iptables-mod-hashlimit not available, installing..." && opkg install iptables-mod-hashlimit; fi
+if [[ $(opkg list-installed | grep -c "^iptables-mod-iprange") == "0" ]]; then echo -e "Pkg iptables-mod-iprange not available, installing..." && opkg install iptables-mod-iprange; fi
+
+rtml="/root/.PolBan"
+wwml="/www/PolBan"
+
+[ ! -d "$rtml" ] && mkdir -p "$rtml"
+[ ! -d "$wwml" ] && mkdir -p "$wwml"
+
+touch "$rtml/save"
+cp -R ./file/run "$rtml/run"
+chmod 755 "$rtml/run"
+cp -R ./file/run.php "$rtml/run.php"
+cp -R ./file/ui/* "$wwml/"
+echo "JDJ5JDEwJDRRdC85ZlpseHNOeTFrZEJ2Nms1ai5tQ0xUVVliWnJRaVpWamlzVWxGcHZWOWxBNWx5VDR5" > "$rtml/.userpass"
+echo "1.0" > "$rtml/version"
+php-cgi firewall-config > /dev/null
+
+echo "Installation SUCCESS!!!"
+echo ""
+echo "WebUI: http://ip/PolBan"
+echo "Default password: 1234"
+echo ""
