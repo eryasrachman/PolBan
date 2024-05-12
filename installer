@@ -1,4 +1,6 @@
 #!/bin/sh
+# Based codes by Teguh Santoso
+# Improved by Helmi Amirudin <helmiau.com>
 
 opkg update
 if [[ $(opkg list-installed | grep -c "^iptables-mod-hashlimit") == "0" ]]; then echo -e "Pkg iptables-mod-hashlimit not available, installing..." && opkg install iptables-mod-hashlimit; fi
