@@ -1,5 +1,5 @@
 ## PolBan
-OpenWrt bandwidth limiter through iptables firewall with PHP GUI
+Polban (Polisi Bandwidth) adalah suatu tool untuk melimit bandwith pada device tertentu melalui pembatasan dari IP Address yang diakses dan berupa limitasi download speed dan upload speed
 
 ## Features
 1. Limit download speed per client/IP
